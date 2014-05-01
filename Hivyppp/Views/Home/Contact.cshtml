@@ -1,17 +1,42 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<div class="contact-page">
+    <div id="map">
+    </div>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+    <div class="contact-box">
+        <div class="contact-info">
+            <h1>Get in touch with us</h1>
+            <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
+        </div>
+        <form id="contact-form">
+            <h1>Send us a Message</h1>
+            <div class="text-fields">
+                <div class="float-input">
+                    <input name="name" id="name" type="text" placeholder="Name">
+                    <span><i class="fa fa-user"></i></span>
+                </div>
+                <div class="float-input">
+                    <input name="mail" id="mail" type="text" placeholder="e-mail">
+                    <span><i class="fa fa-envelope-o"></i></span>
+                </div>
+                <div class="float-input">
+                    <input name="website" id="website" type="text" placeholder="website">
+                    <span><i class="fa fa-link"></i></span>
+                </div>
+            </div>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+            <div class="submit-area">
+                <textarea name="comment" id="comment" placeholder="Message"></textarea>
+                <input type="submit" id="submit_contact" class="main-button" value="Send Now">
+                <div id="msg" class="message"></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="/Scripts/gmap3.min.js"></script>
+}
