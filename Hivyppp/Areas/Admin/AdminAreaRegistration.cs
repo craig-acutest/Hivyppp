@@ -1,23 +1,23 @@
 ﻿using System.Web.Mvc;
 
-namespace Hivyppp.Areas.Admin
+namespace Hivyppp.Areas.admin
 {
-    public class AdminAreaRegistration : AreaRegistration 
+    public class adminAreaRegistration : AreaRegistration 
     {
         public override string AreaName 
         {
             get 
             {
-                return "Admin";
+                return "admin";
             }
         }
 
         public override void RegisterArea(AreaRegistrationContext context) 
         {
             context.MapRoute(
-                "Admin_default",
-                "Admin/{action}/{id}",
-                new { controller = "Admin", action = "Index", id = UrlParameter.Optional }
+                "admin_default",
+                "admin/{action}/{id}",
+                new { controller="admin", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
